@@ -1,0 +1,42 @@
+/* Skill Passport */
+.passport { overflow: hidden; position: relative; }
+.passport-cover { display: flex; justify-content: space-between; align-items: center; padding: 16px 24px; background: linear-gradient(90deg, #2F2660, #5A43C9); color: #fff; }
+.passport-brand { font-family: var(--font-display); font-weight: 800; letter-spacing: 0.2em; font-size: 0.85rem; }
+.passport-no { font-family: ui-monospace, Menlo, monospace; font-size: 0.8rem; opacity: 0.75; letter-spacing: 0.1em; }
+.passport-body { display: grid; grid-template-columns: auto 1fr minmax(220px, 280px); gap: 28px; align-items: center; padding: 28px; background: repeating-linear-gradient(135deg, #fff 0 14px, #FBFAFF 14px 28px); }
+.passport-id { display: flex; flex-direction: column; gap: 4px; }
+.passport-rep { padding: 18px; border-radius: 18px; background: #fff; border: 1px solid var(--border); display: flex; flex-direction: column; gap: 6px; }
+.passport-rep strong { font-family: var(--font-display); font-size: 1.6rem; color: var(--primary); }
+.rep-score { font-weight: 700; font-size: 0.85rem; }
+.passport-stats { display: grid; grid-template-columns: repeat(6, 1fr); border-top: 1px solid var(--border); }
+.passport-stats div { padding: 18px; text-align: center; border-right: 1px solid var(--border); display: flex; flex-direction: column; }
+.passport-stats div:last-child { border: 0; }
+.passport-stats strong { font-family: var(--font-display); font-size: 1.7rem; }
+.passport-stats span { font-size: 0.78rem; color: var(--text-2); font-weight: 600; }
+.passport-stamp { position: absolute; right: 320px; top: 70px; transform: rotate(-12deg); border: 3px solid rgba(46, 158, 143, 0.4); color: rgba(46, 158, 143, 0.55); font-family: var(--font-display); font-weight: 800; font-size: 0.8rem; letter-spacing: 0.15em; padding: 8px 12px; border-radius: 10px; text-align: center; line-height: 1.2; pointer-events: none; }
+@media (max-width: 900px) { .passport-body { grid-template-columns: 1fr; text-align: center; justify-items: center; } .passport-stats { grid-template-columns: repeat(3, 1fr); } .passport-stamp { display: none; } }
+.hours-row { display: grid; grid-template-columns: minmax(90px, 1fr) 2fr auto; gap: 12px; align-items: center; padding: 8px 0; font-size: 0.9rem; font-weight: 600; }
+.hours-bar { height: 8px; background: #F0EEF6; border-radius: 9px; overflow: hidden; }
+.hours-bar i { display: block; height: 100%; background: var(--primary); border-radius: 9px; }
+.hours-row.mint .hours-bar i { background: var(--teal); }
+.badges { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 14px; margin-top: 16px; }
+.badge-card { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 6px; padding: 18px 12px; border-radius: 18px; border: 1px solid var(--border); background: #fff; transition: transform 0.3s var(--ease); }
+.badge-card:hover { transform: translateY(-3px); }
+.badge-icon { width: 58px; height: 58px; display: grid; place-items: center; font-size: 1.7rem; border-radius: 50%; }
+.tier-bronze .badge-icon { background: radial-gradient(circle at 30% 30%, #FFF1E4, #F6D3B2); }
+.tier-silver .badge-icon { background: radial-gradient(circle at 30% 30%, #FFFFFF, #DCE1EE); }
+.tier-gold .badge-icon { background: radial-gradient(circle at 30% 30%, #FFF8DE, #F7D372); }
+.badge-card.locked { opacity: 0.5; filter: grayscale(0.9); border-style: dashed; }
+.endorse { display: inline-flex; align-items: center; gap: 8px; padding: 8px 14px; border-radius: 99px; background: var(--lavender-50); border: 1px solid #E3DCFB; font-weight: 650; }
+.endorse b { background: var(--primary); color: #fff; padding: 1px 8px; border-radius: 99px; font-size: 0.75rem; }
+.ms-list { list-style: none; margin: 10px 0 0; padding: 0; display: flex; flex-direction: column; gap: 8px; }
+.ms-list li { display: flex; align-items: center; gap: 10px; font-size: 0.88rem; }
+.ms-list li span { width: 22px; height: 22px; border-radius: 50%; background: var(--mint); color: var(--mint-ink); display: grid; place-items: center; font-size: 0.7rem; font-weight: 800; }
+.ms-list time { margin-left: auto; color: var(--text-3); font-size: 0.78rem; }
+.wallet-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 16px; }
+.wallet-balance { padding: 26px; background: linear-gradient(135deg, #7357E8, #9A83F3); color: #fff; border: 0; }
+.wallet-balance strong { font-family: var(--font-display); font-size: 3rem; display: block; line-height: 1.1; }
+.wallet-balance p { opacity: 0.85; font-size: 0.82rem; }
+.rules { margin: 10px 0 0; padding-left: 18px; display: flex; flex-direction: column; gap: 6px; color: var(--text-2); font-size: 0.9rem; }
+.rules b { color: var(--text); }
+@media (max-width: 760px) { .wallet-grid { grid-template-columns: 1fr; } }

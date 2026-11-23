@@ -1,0 +1,30 @@
+/* Learning Quest */
+.quest-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.streak-card { display: flex; align-items: center; gap: 14px; padding: 18px; }
+.streak-card strong { display: block; font-family: var(--font-display); font-size: 1.2rem; }
+.streak-flame { font-size: 1.8rem; width: 54px; height: 54px; display: grid; place-items: center; border-radius: 16px; background: #FFF4E6; }
+@media (max-width: 760px) { .quest-stats { grid-template-columns: 1fr; } }
+.quest { padding: 22px; display: flex; flex-direction: column; gap: 16px; }
+.quest.done { background: linear-gradient(180deg, #fff, #F2FBF9); }
+.quest-head { display: flex; justify-content: space-between; gap: 16px; }
+.quest-progress { text-align: right; display: flex; flex-direction: column; }
+.quest-progress strong { font-family: var(--font-display); font-size: 1.9rem; color: var(--teal); line-height: 1; }
+.timeline { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; }
+.tl-item { display: grid; grid-template-columns: 32px 1fr auto; gap: 12px; align-items: flex-start; position: relative; padding-bottom: 18px; }
+.tl-item::before { content: ''; position: absolute; left: 15px; top: 30px; bottom: 0; width: 2px; background: var(--border); }
+.tl-item:last-child::before { display: none; }
+.tl-item.complete::before { background: var(--teal); }
+.tl-dot { width: 32px; height: 32px; border-radius: 50%; border: 2.5px solid #D9D5E6; background: #fff; display: grid; place-items: center; cursor: pointer; transition: all 0.25s var(--ease); color: #fff; z-index: 1; }
+.tl-dot:hover:not(:disabled) { border-color: var(--teal); transform: scale(1.08); }
+.tl-dot:disabled { cursor: default; }
+.tl-item.complete .tl-dot { background: var(--teal); border-color: var(--teal); }
+.tl-item.overdue .tl-dot { border-color: #F0A77B; }
+.tl-body { display: flex; flex-direction: column; gap: 2px; padding-top: 5px; }
+.tl-item.complete .tl-body strong { color: var(--text-2); }
+.tl-item.overdue .tl-body .muted { color: #C26A30; }
+.tl-del { opacity: 0; width: 30px; height: 30px; }
+.tl-item:hover .tl-del { opacity: 1; }
+.quest-foot { padding-top: 12px; border-top: 1px dashed var(--border); flex-wrap: wrap; }
+.quest-foot .input-sm { flex: 1; min-width: 160px; }
+.template-card { display: flex; gap: 10px; align-items: center; padding: 12px 14px; border-radius: 14px; border: 1.5px dashed #CFC4F7; background: var(--lavender-50); color: var(--primary-700); cursor: pointer; text-align: left; }
+.ms-index { width: 26px; height: 26px; flex-shrink: 0; border-radius: 50%; background: var(--mint); color: var(--mint-ink); font-weight: 700; font-size: 0.78rem; display: grid; place-items: center; }
